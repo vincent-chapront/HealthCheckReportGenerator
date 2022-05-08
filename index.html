@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+      .jumbotron {
+        background-color: #e6ffe6;
+        text-align: center;
+      }
+	  table,td,tr,th{
+		border: solid 1px;
+	  }
+	  td,th{
+		padding: 5px;
+	  }
+	  #result th,#result td{
+		width: 100px;
+	  }
+	  body{
+		padding:25px;
+		}
+    </style>
+	
+  </head>
+
+  <body>
+    <div id="elm-app-is-loaded-here"></div>
+    
+    <script src="elm.js"></script>
+    <script>
+      var app = Elm.Main.init({
+        node: document.getElementById("elm-app-is-loaded-here")
+      });      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        .jumbotron {
+            background-color: #e6ffe6;
+            text-align: center;
+        }
+        
+        table#result,
+        table#result td,
+        table#result tr,
+        table#result th {
+            border: solid 1px;
+        }
+        
+        td,
+        th {
+            padding: 5px;
+        }
+        
+        table#choice,
+        table#choice td,
+        table#choice tr,
+        table#choice th {
+            border: none;
+        }
+        
+        table#choice td.selected{
+            border: solid 1px green;
+        }
+        
+        #result th,
+        #result td {
+            width: 100px;
+        }
+        
+        body {
+            padding: 25px;
+        }
+        
+        .float-container {
+            padding: 20px;
+        }
+        
+        .float-child {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+        
+        input.resultData {
+            width: 50px;
+        }
+    </style>
+
+</head>
+<!-- -->
+<!-- elm make src/Main.elm --optimize --output output/healthCheckDiagramGenerator.js -->
+<!-- -->
+<!-- -->
+
+<body>
+    <div id="elm-app-is-loaded-here"></div>
+
+    <script src="healthCheckDiagramGenerator.js"></script>
+    <script>
+        var app = Elm.Main.init({
+            node: document.getElementById("elm-app-is-loaded-here"),
+            flags: {
+                "category": [
+                    "Délivrer de la valeur", "Facile de déployer", "Amusant", "Apprentissage", "Mission", "Pions ou joueurs", "Processus adapté", "Support", "Travail d’équipe", "Santé du code", "Rapidité"
+                ],
+                "teams": ["Equipe 1", "Equipe 2", "Equipe 3"]
+            }
+        });
+    </script>
+</body>
+
+</html>
